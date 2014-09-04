@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<title>Yannick Ngana</title>
+
+	<link rel='stylesheet' href='static/css/reset.css' />
+	<link rel='stylesheet' href='static/css/style.css' />
+	<link rel='icon' href='static/images/favicon.png' />
+</head>
+
+<body>
+	<div id='background-image'></div>
+	<a href='index.html'>
+		<div id='nav_right'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_right.png");'><p>home</p><img src='static/images/arrow_right_hover.png' alt='arrow right' /></div>
+		</div>
+	</a>
+	<content>
+		<div id='projects'>
+
+			<div class='project_item'>
+				<div class='project_name'>Personal Website</div>
+				<div class='project_description'>Self taught html/css/js to put together a website </div>
+				<a class='project_code' href='https://github.com/yannickkkk/'>GitHub</a>
+			</div>
+			
+			<div class='project_item'>
+				<div class='project_name'>Investment Porfolio</div>
+				<div class='project_description'>Currently have an investment portfolio where I invest some of the money I make over coop</div>
+				<a class='project_live' href=''>Live</a>
+			</div>
+		</div>
+	</content>
+
+<script>
+document.onkeyup = KeyCheck;
+function KeyCheck(e) {
+	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+	switch(KeyID) {
+		case 39:
+			window.location = 'index.html';
+			break;
+	}
+}
+</script>
+<script src='static/js/jquery-1.11.1.min.js'></script>
+<script src='static/js/jquery.wookmark.min.js'></script>
+<script>
+$('#projects .project_item').wookmark({
+	container: $('#projects'),
+	offset: 4,
+	outerOffset: 8
+});
+window.onresize = function(event) {
+    $('#projects').trigger('refreshWookmark');
+};
+</script>
+</body>
+</html>

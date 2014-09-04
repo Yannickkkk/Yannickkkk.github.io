@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<title>Kevin James</title>
+
+	<link rel='stylesheet' href='static/css/reset.css' />
+	<link rel='stylesheet' href='static/css/style.css' />
+	<link rel='icon' href='static/images/favicon.png' />
+</head>
+
+<body>
+	<div id='background-image'></div>
+	<a href='index.html'>
+		<div id='nav_left'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_left.png");'><p>home</p><img src='static/images/arrow_left_hover.png' alt='arrow left' /></div>
+		</div>
+	</a>
+	<content style='overflow-y:hidden;'>
+			<iframe src='static/resources/resume.pdf' style='width:100%; max-width:850px; height:95%; padding:1%;'>
+	</content>
+
+<script>
+document.onkeyup = KeyCheck;
+function KeyCheck(e) {
+	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+	switch(KeyID) {
+		case 37:
+			window.location = 'index.html';
+			break;
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<title>Yannick Ngana</title>
+
+	<link rel='stylesheet' href='static/css/reset.css' />
+	<link rel='stylesheet' href='static/css/style.css' />
+	<link rel='icon' href='static/images/favicon.png' />
+</head>
+
+<body>
+	<div id='background-image'></div>
+	<a href='projects.html'>
+		<div id='nav_left'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_left.png");'><p>projects</p><img src='static/images/arrow_left_hover.png' alt='arrow left' /></div>
+		</div>
+	</a>
+	<a href='index.html'>
+		<div id='nav_up'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_up.png");'><p>home</p><img src='static/images/arrow_up_hover.png' alt='arrow up' /></div>
+		</div>
+	</a>
+	<a href='resource.html'>
+		<div id='nav_right'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_right.png");'><p>resume</p><img src='static/images/arrow_right_hover.png' alt='arrow right' /></div>
+		</div>
+	</a>
+	<content>
+		<div id='timeline'>
+			<div class='timeitem work' id='item3' onclick='show("item3_info"); return false;'>Riverstone Resources</div>
+			<div class='timeitem work' id='item2' onclick='show("item2_info"); return false;'>UBS Investment Bank</div>
+			<div class='timeitem work' id='item1' onclick='show("item1_info"); return false;'>OntarioMD</div>
+			<div class='timeitem work' id='item0' onclick='show("item0_info"); return false;'>Northwater Capital Management</div>
+		</div>
+
+		<div id='information'>
+			<div class='info_block' id='item0_info'>
+				<div id='title'>Northwater Capital Management</div>
+				<div id='tagline'>Associate - Intellectual Property Fund</div>
+				<div id='info'>
+					<p>This was my first formal job, and it was amazing. </p>
+					<p>Learned a lot and developed an interest for the business world.</p>
+				</div>
+			</div>
+			<div class='info_block' id='item1_info'>
+				<div id='title'>OntarioMD</div>
+				<div id='tagline'>Business Intelligence Analyst</div>
+				<div id='info'>
+					<p>Looked forward to develop business intelligence skills in a new industry.</p>
+					<p>Picked up a lot of useful data analysis skills. Found that I prefer business/finance industry.</p>
+				</div>
+			</div>
+			<div class='info_block' id='item2_info'>
+				<div id='title'>UBS Investment Bank</div>
+				<div id='tagline'>Project Risk Intern</div>
+				<div id='info'>
+					<p>Got back into the business world, and with UBS being a big name I was excited.</p>
+					<p>Thoroughly enjoyed the experience, and when offered a chance to return and take on more responsibility I accepted.</p>
+				</div>
+			</div>
+			<div class='info_block' id='item3_info'>
+				<div id='title'>Riverstone Resources</div>
+				<div id='tagline'>Business Analyst</div>
+				<div id='info'>
+					<p>This will be my first coop abroad in the US, and looking forward to that experience.</p>
+				</div>
+			</div>
+		</div>
+	</content>
+
+<script>
+document.onkeyup = KeyCheck;
+function KeyCheck(e) {
+	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+	switch(KeyID) {
+		case 37:
+			window.location = 'projects.html';
+			break;
+		case 38:
+			window.location = 'index.html';
+			break;
+		case 39:
+			window.location = 'resource.html'
+			break;
+	}
+}
+
+function getElementsByClassName(classname, node) {
+	if(!node) node = document.getElementsByTagName("body")[0];
+	var a = [];
+	var re = new RegExp('\\b' + classname + '\\b');
+	var els = node.getElementsByTagName("*");
+	for(var i = 0, j = els.length; i < j; i++)
+		if(re.test(els[i].className)) a.push(els[i]);
+	return a;
+}
+
+function show(id) {
+	var elements = new Array();
+	elements = getElementsByClassName('info_block');
+	for(i in elements) {
+		elements[i].style.display = 'none';
+	}
+	elements = getElementsByClassName('timeitem');
+	for(i in elements) {
+		elements[i].removeAttribute('style')
+	}
+
+	document.getElementById(id.replace(/_info$/, '')).style.width = '330px';
+	document.getElementById(id).style.display = 'block';
+}
+
+window.onload = show("item8_info");
+</script>
+</body>
+</html>

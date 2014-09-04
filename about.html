@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<title>Yannick Ngana</title>
+
+	<link rel='stylesheet' href='static/css/reset.css' />
+	<link rel='stylesheet' href='static/css/style.css' />
+	<link rel='icon' href='static/images/favicon.png' />
+</head>
+
+<body>
+	<div id='background-image'></div>
+	<a href='projects.html'>
+		<div id='nav_left'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_left.png");'><p>projects</p><img src='static/images/arrow_left_hover.png' alt='arrow left' /></div>
+		</div>
+	</a>
+	<a href='index.html'>
+		<div id='nav_down'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_down.png");'><p>home</p><img src='static/images/arrow_down_hover.png' alt='arrow down' /></div>
+		</div>
+	</a>
+	<a href='resource.html'>
+		<div id='nav_right'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_right.png");'><p>resume</p><img src='static/images/arrow_right_hover.png' alt='arrow right' /></div>
+		</div>
+	</a>
+	<content style='overflow-y:hidden;'>
+		<div id='centered'>
+			<img id='pic' src='static/images/pic.png' alt='Yannick Ngana'>
+			<h1 id='name'>Yannick Ngana</h1>
+			<h4 id='quote'>"Hi there! I am a student at the University of Waterloo studying System Design Engineering. As an engineering student, I have a variety of interests that transcend the traditional engineering boundaries. I have gotten interested in the finance industry."</h4>
+		</div>
+	</content>
+
+<script>
+document.onkeyup = KeyCheck;
+function KeyCheck(e) {
+	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+	switch(KeyID) {
+		case 39:
+			window.location = 'index.html';
+			break;
+	}
+}
+</script>
+<script src='static/js/jquery-1.11.1.min.js'></script>
+<script src='static/js/jquery.wookmark.min.js'></script>
+<script>
+$('#projects .project_item').wookmark({
+	container: $('#projects'),
+	offset: 4,
+	outerOffset: 8
+});
+window.onresize = function(event) {
+    $('#projects').trigger('refreshWookmark');
+};
+</script>
+</body>
+</html>

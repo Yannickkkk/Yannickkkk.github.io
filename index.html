@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='author' content='Yannick Ngana'>
+	<meta name='description' content='Homepage of Yannick Ngana'>
+	<meta name='keywords' content='Yannick,Ngana'>
+
+	<title>Yannick Ngana</title>
+
+	<link rel='stylesheet' href='static/css/reset.css' />
+	<link rel='stylesheet' href='static/css/style.css' />
+	<link rel='icon' href='static/images/favicon.png' />
+</head>
+
+<body>
+	<div id='background-image'></div>
+	<a href='about.html'>
+		<div id='nav_up'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_up.png");'><p>about</p><img src='static/images/arrow_up_hover.png' alt='arrow up' /></div>
+		</div>
+	</a>
+	<a href='projects.html'>
+		<div id='nav_left'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_left.png");'><p>projects</p><img src='static/images/arrow_left_hover.png' alt='arrow left' /></div>
+		</div>
+	</a>
+	<a href='timeline.html'>
+		<div id='nav_down'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_down.png");'><p>timeline</p><img src='static/images/arrow_down_hover.png' alt='arrow down' /></div>
+		</div>
+	</a>
+	<a href='resource.html'>
+		<div id='nav_right'>
+			<div class='arrow_box' style='background-image:url("static/images/arrow_right.png");'><p>resume</p><img src='static/images/arrow_right_hover.png' alt='arrow right' /></div>
+		</div>
+	</a>
+	<content style='overflow-y:hidden;'>
+		<div id='centered'>
+			<img id='pic' src='static/images/face.png' alt='Yannick Ngana'>
+			<h1 id='name'>Yannick Ngana</h1>
+			<h4 id='quote'>"Sometimes the questions are complicated and the answers are simple."</h4>
+			<ul id='social'>
+				<li id='linkedin'><a href='http://linkedin.com/in/yannickngana' class='front'></a><a href='http://linkedin.com/in/yannickngana' class='back'></a></li>
+				<li id='github'><a href='https://github.com/yannickkkk' class='front'></a><a href='https://github.com/yannickkkk' class='back'></a></li>
+				<li id='facebook'><a href='https://www.facebook.com/yannick.ngana' class='front'></a><a href='https://www.facebook.com/yannick.ngana' class='back'></a></li>
+				<li id='instagram'><a href='http://instagram.com/yannickngana' class='front'></a><a href='http://instagram.com/yannickngana' class='back'></a></li>
+				<li id='email'><a href='mailto:yannickngana@gmail.com' class='front'></a><a href='mailto:yannickngana@gmail.com' class='back'></a></li>
+			</ul>
+		</div>
+	</content>
+
+<script>
+document.onkeyup = KeyCheck;
+function KeyCheck(e) {
+	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+	switch(KeyID) {
+		case 37:
+			window.location = 'projects.html';
+			break;
+		case 39:
+			window.location = 'resource.html';
+			break;
+		case 40:
+			window.location = 'timeline.html';
+			break;
+	}
+}
+</script>
+</body>
+</html>
