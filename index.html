@@ -6,6 +6,25 @@
 	<meta name='description' content='Homepage of Yannick Ngana'>
 	<meta name='keywords' content='Yannick,Ngana'>
 
+	<script>
+	document.onkeyup = KeyCheck;
+	function KeyCheck(e) {
+		var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+		switch(KeyID) {
+			case 37:
+				window.location = 'projects.html';
+				break;
+			case 39:
+				window.location = 'resource.html';
+				break;
+			case 40:
+				window.location = 'timeline.html';
+				break;
+		}
+	}
+	</script>
+	
 	<title>Yannick Ngana</title>
 
 	<link rel='stylesheet' href='static/css/reset.css' />
@@ -50,23 +69,5 @@
 		</div>
 	</content>
 
-<script>
-document.onkeyup = KeyCheck;
-function KeyCheck(e) {
-	var KeyID = (window.event) ? event.keyCode : e.keyCode;
-
-	switch(KeyID) {
-		case 37:
-			window.location = 'projects.html';
-			break;
-		case 39:
-			window.location = 'resource.html';
-			break;
-		case 40:
-			window.location = 'timeline.html';
-			break;
-	}
-}
-</script>
 </body>
 </html>
