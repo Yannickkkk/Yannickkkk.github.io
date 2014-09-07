@@ -34,17 +34,24 @@
 	</content>
 
 <script>
-document.onkeyup = KeyCheck;
-function KeyCheck(e) {
-	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+	document.onkeyup = KeyCheck;
+	function KeyCheck(e) {
+		var KeyID = (window.event) ? event.keyCode : e.keyCode;
 
-	switch(KeyID) {
-		case 39:
-			window.location = 'index.html';
-			break;
+		switch(KeyID) {
+			case 37:
+				window.location = 'projects.html';
+				break;
+			case 39:
+				window.location = 'resource.html';
+				break;
+			case 40:
+				window.location = 'index.html';
+				break;
+		}
 	}
-}
-</script>
+	</script>
+
 <script src='static/js/jquery-1.11.1.min.js'></script>
 <script src='static/js/jquery.wookmark.min.js'></script>
 <script>
