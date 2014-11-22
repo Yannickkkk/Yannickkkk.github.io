@@ -1,6 +1,19 @@
 <!doctype html>
 <html>
 <head>
+	<script>
+	document.onkeyup = KeyCheck;
+	function KeyCheck(e) {
+		var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+		switch(KeyID) {
+			case 37:
+				window.location = 'index.html';
+				break;
+		}
+	}
+	</script>
+
 	<title>Yannick Ngana</title>
 
 	<link rel='stylesheet' href='static/css/reset.css' />
@@ -18,18 +31,5 @@
 	<content style='overflow-y:hidden;'>
 			<iframe src='static/resources/resume.pdf' style='width:100%; max-width:850px; height:95%; padding:1%;'>
 	</content>
-
-<script>
-document.onkeyup = KeyCheck;
-function KeyCheck(e) {
-	var KeyID = (window.event) ? event.keyCode : e.keyCode;
-
-	switch(KeyID) {
-		case 37:
-			window.location = 'index.html';
-			break;
-	}
-}
-</script>
 </body>
 </html>
