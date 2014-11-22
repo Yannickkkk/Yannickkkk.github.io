@@ -54,7 +54,7 @@ body {
   overflow: hidden; }
 
 #background-image {
-  background: #2b2b2b url("../images/bg4.png");
+  background: #2b2b2b url("../images/bg5.png");
   background-size: cover;
   opacity: 0.4;
   filter: blur(3px);
