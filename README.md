@@ -1,4 +1,4 @@
-Yannickkkk.github.io
+yannickngana.github.io
 ====================
 
 personal site
